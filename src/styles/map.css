@@ -1,0 +1,9 @@
+.country {
+  /* fill: #ccc; */
+  stroke: #999;
+}
+
+.world-map-container {
+  display: flex;
+  flex-direction: row;
+}
