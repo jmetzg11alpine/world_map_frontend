@@ -1,4 +1,4 @@
-import { useRef, useState, useEffect } from 'react'
+import { useRef, useEffect } from 'react'
 import * as d3 from 'd3'
 import '../styles/map.css'
 
@@ -21,10 +21,13 @@ const findPercentChangeV2 = (country_name, stockData) => {
   let stockItem = stockData.find((item) => {
     return item[0] === country_name
   })
+  let response = ''
   if (!stockItem) {
-    stockItem = [0, 'no data']
+    response = 'no data'
+  } else {
+    response = stockItem[1] + '%'
   }
-  return stockItem[1]
+  return response
 }
 
 const Map = ({ stockData, worldData }) => {
@@ -87,7 +90,7 @@ const Map = ({ stockData, worldData }) => {
     '#3300cc',
     '#0000ff',
   ]
-  const colorText = ['<3%', '<1.5', '<0', '>0', '>1.5', '>1.5']
+  const colorText = ['<3%', '<1.5%', '<0%', '>0%', '>1.5%', '>3%']
   const legend = d3.select(Legend.current)
   legend.selectAll('*').remove()
   legend

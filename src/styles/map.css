@@ -1,5 +1,13 @@
+.map-title {
+  display: flex;
+  align-items: center;
+}
+
+.map-title p {
+  margin-left: 8px;
+}
+
 .country {
-  /* fill: #ccc; */
   stroke: #999;
 }
 

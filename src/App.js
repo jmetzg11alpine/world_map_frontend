@@ -23,7 +23,11 @@ function App() {
 
   return (
     <div>
-      <h1>Weekly Percent Change to financial markets</h1>
+      <div className='map-title'>
+        <h1>Weekly Percent Change to financial markets</h1>
+        {'  '}
+        <p>(with hover effect)</p>
+      </div>
       <Map stockData={stockData} worldData={worldData} />
       <p>
         All the data is scrapped from{' '}
